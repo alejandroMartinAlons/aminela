@@ -69,7 +69,7 @@ describe('Test del modulo alta', function () {
     	});
     });
 
-    describe('Test del servicio de alta',function () {
+    describe('Test del servicio de alta', function () {
         var $httpBackend, AltaSrv, config;
 
         beforeEach(inject(function (_$httpBackend_, _AltaSrv_, _config_) {
@@ -147,7 +147,7 @@ describe('Test del modulo alta', function () {
             });
         });
 
-        it ('Test KO: Probar error en caso de 403',function () {
+        it ('Test KO: Probar error en caso de 403', function () {
             var altaData = {
                 email: 'pepe@email.com',
                 password: '12345',
