@@ -79,19 +79,20 @@ describe('Test del modulo alta', function () {
         }));
 
         it('Test OK: Probemos que obtenemos los datos correctos si el alta es un exito',function () {
-           var altaData ={
-               email:'pepe@email.com',
-               password:'12345'
-           };
+            var altaData = {
+                email:'pepe@email.com',
+                password:'12345',
+                password2:'12345'
+            };
 
             var servConfig = config.backService.altaConf;
             var service = new AltaSrv();
                 
-            $httpBackend.expect(servConfig.method, servConfig.url, altagData).respond(function () {
+            $httpBackend.expect(servConfig.method, servConfig.url, altaData).respond(function () {
                 return [200,{data:'OK'},{}];
             });
 
-            service.doAlta(altagData.email, altagData.password).
+            service.doAlta(altaData.email, altaData.password, altaData.password2).
             then(function (result) {
                 expect(result.data).toBe('OK');
             }, function (error) {
@@ -103,7 +104,7 @@ describe('Test del modulo alta', function () {
         
         it ('Test KO: Probar error en caso de 404',function () {
 
-                var laltaData = {
+                var altaData = {
                     email:'pepe@email.com',
                     password:'12345'
                 };
@@ -116,7 +117,7 @@ describe('Test del modulo alta', function () {
                     return [404,{},{}];
                 });
                 
-                service.doAlta(laltaData.email, altaData.password).then(function (result) {
+                service.doAlta(altaData.email, altaData.password).then(function (result) {
                    expect(false).toBe(true); 
                 }, function (error) {
                     expect(error.usuario.msg).toBe(errorConfig['404']);
