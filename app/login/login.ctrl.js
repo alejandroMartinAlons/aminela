@@ -20,7 +20,7 @@ function LoginCtrl($filter,LoginSrv,$state, $stateParams) {
         if (!disable) {
             service.doLogin(vm.email, vm.password).then(function(data){
                console.log('Login con exito');
-                $state.go('menu.dashboard');
+                $state.go('menu');
             },function (error) {
                 vm.errorMsg = error.usuario.msg;
                 vm.message=null;
