@@ -217,16 +217,16 @@ describe('Test del modulo alta', function () {
         });
     });
     
-    describe("Test del controlador de login", function () {
+    describe("Test del controlador de alta", function () {
        var controlador, $httpBackend, config;
         
-        beforeEach(inject(function ($controller, $filter, LoginSrv, $state, _$httpBackend_,_config_) {
+        beforeEach(inject(function ($controller, $filter, AltaSrv, $state, _$httpBackend_,_config_) {
             controlador = function () {
                 $httpBackend = _$httpBackend_;
                 config = _config_;
-                return $controller('LoginCtrl',{
+                return $controller('AltaCtrl',{
                     '$filter':$filter,
-                    'LoginSrv': LoginSrv,
+                    'AltaSrv': AltaSrv,
                     '$state':$state
                 });
             }
