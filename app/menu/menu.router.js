@@ -3,8 +3,7 @@ function getStates() {
         state:'menu',
         config:{
             template: require('./menu.template.html'),
-            url:'/menu',
-            abstract: true
+            url:'/menu'
         }
     }];
 }
