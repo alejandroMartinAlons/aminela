@@ -7,11 +7,7 @@ function Config (){
         msgError:{
             invalidMail:'Mail mal formado',
             invalidPass:'Password mal formado',
-<<<<<<< HEAD
-            differentPasswords:'Passwords distintos'
-=======
             invalidPassEqual:'Password no coincidentes'
->>>>>>> 9ee30c8bc1d6d0820085a7adda4f8d32663d4242
         },
         backService:{
             loginConf:{
@@ -19,18 +15,10 @@ function Config (){
                 url:'app/mocks/loginSrv.json',
                 responseType: 'json'
             },
-<<<<<<< HEAD
-            altaConf:{
-                method:'GET',
-                url:'app/mocks/altaSrv.json',
-                responseType:'json'
-                
-=======
              altaConf:{
                 method:'GET',
                 url:'app/mocks/altaSrv.json',
                 responseType: 'json'
->>>>>>> 9ee30c8bc1d6d0820085a7adda4f8d32663d4242
             }
         },
         serviceError:{
