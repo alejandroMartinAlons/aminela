@@ -20,6 +20,7 @@ require('./login/pass.fltr');
 require('./login/login.srv');
 require('./alta/passRepeat.fltr');
 require('./menu/menu.router');
+require('./menu/menu.srv');
 require('./dashboard/dashboard.router');
 
 var app = require('./app');

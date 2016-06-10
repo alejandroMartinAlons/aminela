@@ -1,0 +1,17 @@
+{
+  "titulo": "quiniela",
+  "opciones": [
+    {
+      "titulo": "acceso a quiniela",
+      "estado": "/acceso"
+    },
+    {
+      "titulo": "resultados quiniela",
+      "estado": "/resultados"
+    },
+    {
+      "titulo": "estadisticas quiniela",
+      "estado": "/estadisticas"
+    }
+  ]
+}
