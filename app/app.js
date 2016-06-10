@@ -4,5 +4,7 @@ module.exports = angular.module('app',[
     'home',
     'login',
     'common',
-    'alta'
+    'alta',
+    'menu',
+    'dashboard'
 ]);

@@ -6,17 +6,13 @@ function getStates() {
             url:'/alta',
             controller: 'AltaCtrl',
             controllerAs:"alta"
-
         }
     }];
 }
 
-
-
 function altaRun (routerHelper) {
     routerHelper.configureStates(getStates());
 }
-
 
 module.exports=angular.module('alta',[]).run(['routerHelper', altaRun]);
 

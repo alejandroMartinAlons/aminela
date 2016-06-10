@@ -19,7 +19,8 @@ function LoginCtrl($filter,LoginSrv,$state, $stateParams) {
         
         if (!disable) {
             service.doLogin(vm.email, vm.password).then(function(data){
-               console.log('Login con exito'); 
+               console.log('Login con exito');
+                $state.go('menu.dashboard');
             },function (error) {
                 vm.errorMsg = error.usuario.msg;
                 vm.message=null;
@@ -37,8 +38,4 @@ function LoginCtrl($filter,LoginSrv,$state, $stateParams) {
     };
 }
 
-<<<<<<< HEAD
-module.exports = angular.module('login').controller('LoginCtrl', ['$filter','LoginSrv','$state', LoginCtrl]);
-=======
 module.exports = angular.module('login').controller('LoginCtrl', ['$filter','LoginSrv','$state','$stateParams', LoginCtrl]);
->>>>>>> 9ee30c8bc1d6d0820085a7adda4f8d32663d4242

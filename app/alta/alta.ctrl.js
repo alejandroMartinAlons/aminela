@@ -15,20 +15,17 @@ function AltaCtrl ($filter,AltaSrv,$state){
                console.log('Alta con exito'); 
                $state.go('login', {result:"Se creado el usuario correctamente"});
             },function (error) {
-
                 vm.errorMsg = error.usuario.msg;
             });
         }
     };
 
     vm.clean = function () {
-
         vm.email="";
         vm.password="";
         vm.passwordRepeat="";
         vm.errorMsg ="";
     };
-
 }
 
 module.exports = angular.module('alta').controller('AltaCtrl',['$filter','AltaSrv','$state', AltaCtrl]);

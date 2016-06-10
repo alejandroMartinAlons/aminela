@@ -10,7 +10,6 @@ function altaSrvFactory ($http,$q,config,ErrorManager){
                 email:email,
                 password:psswd,
                 passwordRepeat: passwordRepeat
-
             };
 
             $http(serviceConfig).then(function (result) {
@@ -23,7 +22,6 @@ function altaSrvFactory ($http,$q,config,ErrorManager){
             return defer.promise;
         }
     }
-    
     return altaClass;
 }
 

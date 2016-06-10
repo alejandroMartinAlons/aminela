@@ -56,7 +56,7 @@ describe('Test del modulo alta', function () {
             
             $httpBackend.flush();
         });
-          
+
         it ('Test KO: Probar error en caso de 404',function () {
                 var altaData ={
                     email:'pepe@email.com',
@@ -115,14 +115,14 @@ describe('Test del modulo alta', function () {
             $httpBackend.expect(servConfig.method, servConfig.url, altaData).respond(function () {
                 return [403,{},{}];
             });
-            
+
             service.doAlta(altaData.email, altaData.password, altaData.passwordRepeat).then(function (result) {
                 expect(false).toBe(true);
             }, function (error) {
                 expect(error.usuario.msg).toBe(errorConfig['403']);
             });
         });
-          
+
         it ('Test KO: Probar error en caso de 500',function () {
             var altaData ={
                 email:'pepe@email.com',
@@ -144,7 +144,7 @@ describe('Test del modulo alta', function () {
                 expect(error.usuario.msg).toBe(errorConfig['500']);
             });
         });
-          
+
         it ('Test KO: Probar error en caso de 600',function () {
             var altaData ={
                 email:'pepe@email.com',
@@ -221,7 +221,7 @@ describe('Test del modulo alta', function () {
                 expect(true).toBe(true);
             }
         });
-        
+
         it('Test KO: Actualizamos el mesaje de error',function () {
             var ctrl = controlador();
             ctrl.email = "pepe@mail.com";
@@ -249,7 +249,7 @@ describe('Test del modulo alta', function () {
                 expect(true).toBe(false);
             }
         });
-        
+
         it('Test OK: Probemos que el clean limpia el email,el password y la repet', function () {
            var ctrl = controlador();
             ctrl.email = "pepe@mail.com";
