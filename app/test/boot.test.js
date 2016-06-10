@@ -21,11 +21,10 @@ require('../login/login.srv');
 require('../login/login.test');
 require('../alta/alta.router');
 require('../alta/alta.ctrl');
-require('../alta/alta.fltr');
-require('../alta/pass.fltr');
-require('../alta/pass2.fltr');
+require('../alta/passRepeat.fltr');
 require('../alta/alta.srv');
 require('../alta/alta.test');
+
 
 var app = require('../app');
 
