@@ -13,6 +13,12 @@ function Config (){
                 method:'POST',
                 url:'/test',
                 responseType: 'json'
+            },
+             altaConf:{
+                method:'POST',
+                url:'/alta',
+                responseType:'json'
+                
             }
         },
         serviceError:{
