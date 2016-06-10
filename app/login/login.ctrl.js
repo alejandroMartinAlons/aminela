@@ -37,8 +37,4 @@ function LoginCtrl($filter,LoginSrv,$state, $stateParams) {
     };
 }
 
-<<<<<<< HEAD
-module.exports = angular.module('login').controller('LoginCtrl', ['$filter','LoginSrv','$state', LoginCtrl]);
-=======
 module.exports = angular.module('login').controller('LoginCtrl', ['$filter','LoginSrv','$state','$stateParams', LoginCtrl]);
->>>>>>> 9ee30c8bc1d6d0820085a7adda4f8d32663d4242
