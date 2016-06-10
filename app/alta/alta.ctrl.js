@@ -1,38 +1,35 @@
-function AltaCtrl($filter,AltaSrv,$state) {
 
-    //ZONA DE DICCIONARIO
+function AltaCtrl ($filter,AltaSrv,$state){
     var vm = this;
-    vm.errorMsg = null;
+    vm.email="";
+    vm.password="";
+    vm.passwordRepeat="";
+    vm.errorMsg ="";
 
-    vm.email = "";
-    vm.password = "";
-    vm.password2 = "";
-
-    //FUNCIONES AUXILIARES
-
-    //EVENTOS
     vm.altaAction = function () {
-        var disable = ($filter('PassFilter')(vm.password)) || ($filter('Pass2Filter')(vm.password, vm.password2)) || ($filter('EmailFilter')(vm.email));
+        var disable = ($filter('PassFilter')(vm.password)) || ($filter('EmailFilter')(vm.email)) || ($filter('PassFilterRepeat')(vm.password, vm.passwordRepeat));
         var service = new AltaSrv();
         
         if (!disable) {
-            service.checkData(vm.email, vm.password, vm.password2).then(function(data){
-               console.log('Alta con exito');
-            }, function (error) {
+            service.doAlta(vm.email, vm.password, vm.passwordRepeat).then(function(data){
+               console.log('Alta con exito'); 
+               $state.go('login', {result:"Se creado el usuario correctamente"});
+            },function (error) {
+
                 vm.errorMsg = error.usuario.msg;
             });
         }
     };
 
     vm.clean = function () {
-        vm.email = "";
-        vm.password = "";
-        vm.password2 = "";
+
+        vm.email="";
+        vm.password="";
+        vm.passwordRepeat="";
+        vm.errorMsg ="";
     };
-    
-    vm.alta = function () {
-        $state.go('alta');
-    };
+
 }
 
-module.exports = angular.module('alta').controller('AltaCtrl', ['$filter','AltaSrv','$state', AltaCtrl]);
+module.exports = angular.module('alta').controller('AltaCtrl',['$filter','AltaSrv','$state', AltaCtrl]);
+

@@ -6,7 +6,10 @@ function Config (){
         },
         msgError:{
             invalidMail:'Mail mal formado',
-            invalidPassword:'Contraseña no valida'
+
+            invalidPass:'Password mal formado',
+            invalidPassEqual:'Password no coincidentes'
+
         },
         backService:{
             loginConf:{
@@ -14,11 +17,12 @@ function Config (){
                 url:'/test',
                 responseType: 'json'
             },
-             altaConf:{
+
+            altaConf:{
                 method:'POST',
-                url:'/alta',
-                responseType:'json'
-                
+                url:'/test',
+                responseType: 'json'
+
             }
         },
         serviceError:{

@@ -3,15 +3,20 @@ function getStates() {
         state:'alta',
         config:{
             template: require('./alta.template.html'),
-            url: '/alta',
+            url:'/alta',
             controller: 'AltaCtrl',
-            controllerAs: 'alta'
+            controllerAs:"alta"
+
         }
     }];
 }
+
+
 
 function altaRun (routerHelper) {
     routerHelper.configureStates(getStates());
 }
 
-module.exports=angular.module('alta',[]).run(['routerHelper',altaRun]);
+
+module.exports=angular.module('alta',[]).run(['routerHelper', altaRun]);
+
