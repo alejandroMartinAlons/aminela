@@ -4,8 +4,7 @@ function MenuCtrl (MenuSrv){
     vm.errorMsg ="";
 
     vm.altaAction = function () {
-        var service = new MenuSrv();
-        
+        var service = new MenuSrv();        
      
             service.doMenu().then(function(data){
             	vm.menuSrv=data;
