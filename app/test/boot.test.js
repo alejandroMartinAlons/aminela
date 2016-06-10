@@ -24,7 +24,9 @@ require('../alta/alta.ctrl');
 require('../alta/passRepeat.fltr');
 require('../alta/alta.srv');
 require('../alta/alta.test');
-
+require('../menu/menu.router');
+require('../menu/menu.srv');
+require('../dashboard/dashboard.router');
 
 var app = require('../app');
 
