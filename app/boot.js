@@ -21,6 +21,8 @@ require('./login/login.srv');
 require('./alta/passRepeat.fltr');
 require('./menu/menu.router');
 require('./menu/menu.srv');
+require('./menu/menuAbs.drtv');
+require('./menu/menu.ctrl');
 require('./dashboard/dashboard.router');
 
 var app = require('./app');
