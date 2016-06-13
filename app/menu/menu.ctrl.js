@@ -7,7 +7,7 @@ function MenuCtrl (MenuSrv){
         var service = new MenuSrv();        
      
             service.doMenu().then(function(data){
-            	vm.menuSrv=data;
+            	vm.menu=data;
                console.log('Menu con exito'); 
             },function (error) {
                 vm.errorMsg = error.usuario.msg;
