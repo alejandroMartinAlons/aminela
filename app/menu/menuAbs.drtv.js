@@ -5,7 +5,7 @@ angular.module('menu').directive('myDirective',function(){
     bindToController:{
       menu: '='
     },
-    template:require('./menu.directiva.template.html'),
+    templateUrl: require('./menu.directiva.template.html'),
     controllerAs:'menuPadre',
     controller: function(){
       var vm = this;
