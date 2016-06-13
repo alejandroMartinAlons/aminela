@@ -1,0 +1,13 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            {{menuDrctv.menu.titulo}}
+        </div>
+        <ul class="nav navbar-nav">
+            <li ng-repeat="option in menuDrctv.menu.opciones">
+                <a href="#" ng-click="menuDrctv.doAction(option)">{{option.titulo}}</a>
+            </li>
+        </ul>
+    </div>
+</nav>

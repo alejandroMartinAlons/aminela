@@ -1,0 +1,23 @@
+{
+  "titulo": "aminiela",
+  "opciones":[
+    {
+      "titulo":"Haz quiniela",
+      "servicio":"AccionSrv",
+      "metodo":"printMsg",
+      "parameters":["Se ha pulsado sobre Hay quiniela"]
+    },
+    {
+      "titulo":"Resultados Quinela",
+      "servicio":"AccionSrv",
+      "metodo":"printMsg",
+      "parameters":["Se ha pulsado sobre Resultados Quinela"]
+    },
+    {
+      "titulo":"Estadisticas quiniealas",
+      "servicio":"AccionSrv",
+      "metodo":"printMsg",
+      "parameters":["Se ha pulsado sobre Estadisticas quiniealas"]
+    }
+  ]
+}
